@@ -63,6 +63,10 @@ html,body{
     left: 20%;
     background-color: white;
     filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.185));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right:2.3rem;
 }
 
 .main{
@@ -229,4 +233,29 @@ border-radius: 10px;
 }
 #back:hover{
     color: blue;
+}
+
+.box{
+    width: 40px;
+    height: 40px;
+    /* background-color: aqua; */
+    box-shadow: 0 0 5px #1463e127;
+    border-radius: 50%;
+    margin-left: 2rem;
+}
+
+#profile{
+background-image: url(https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80);
+background-size: cover;
+}
+
+#logout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active{
+    background-color: rgb(255, 255, 255);
+    color: rgb(50, 85, 240);
 }

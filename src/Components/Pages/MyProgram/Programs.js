@@ -1,6 +1,7 @@
 import { React, useState, useContext , useEffect} from "react";
 import Program from "./Program";
-import ProgramStateContext from '../../Utilities/Context'
+import ProgramStateContext from '../../../Utilities/Context'
+import items from './Data'
 
 
 function Programs() {
@@ -20,10 +21,14 @@ function Programs() {
     <div className="main">
     <h1>My Program</h1>
     <div className="card-wrapper">
-      <div className="card" onClick={onChangeHandler}>
-        <div className="cardImg"></div>
-        <h5>How to lose 10kgs in a week</h5>
-      </div>
+    
+    {items.map((elem,i)=>{
+     return <div className="card" onClick={onChangeHandler}>
+      <div className="cardImg"></div>
+      <h5>How to lose 10kgs in a week</h5>
+    </div>
+    })}
+  
     </div>
     <h1>Other Programs</h1>
   </div>  

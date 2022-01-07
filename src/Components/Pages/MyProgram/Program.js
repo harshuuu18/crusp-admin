@@ -1,9 +1,12 @@
 import {React, useContext, useEffect} from 'react'
-import Batch from './Batch'
-import ProgramStateContext from '../../Utilities/Context'
+import Batch from '../Batch/Batch'
+import ProgramStateContext from '../../../Utilities/Context'
+// import items from './Data'
+import { useState } from 'react/cjs/react.development';
 
 function Program() {
     const {programState, setProgramState } = useContext(ProgramStateContext);
+    // const [items, setItems] = useState(items)
     
     const onChangeHandler=()=>{
         setProgramState(true)
@@ -17,6 +20,8 @@ function Program() {
         <div className='main'>
         <p id="back" onClick={onChangeHandler}>Go Back</p>
          <h1>My Programs</h1>   
+     
+        
          <div className='program-img'>
         </div>         
         <h2 className='title'>ABC Program</h2>
