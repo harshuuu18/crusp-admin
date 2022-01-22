@@ -1,0 +1,10 @@
+POST https://api.cruspo.com/api/user/content/getContents
+Content-Type: "application/json"
+cruspohost:"keshavsuman.cruspo.com"
+
+{
+    "select":{},
+    "project":{},
+    "limit":20,
+    "skip":0
+}
