@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import withAuth from "../../../helpers/AuthUser";
-import { GetContentsRoute, LogInRoute, SignUpRoute } from "../../../network/services";
+import { GetContentsRoute, SignUpRoute } from "../../../network/services";
 
 function Content() {
   const navigate = useNavigate();
@@ -9,7 +9,6 @@ function Content() {
 
   useEffect(() => {
     let _user = JSON.parse(localStorage.getItem("user"));
-    LogInRoute({body:{email:"harshuuu814@gmail.com",password:"Admin@123"}})
     if (_user) {
       GetContentsRoute({ setContent, token: _user.token });
     }
@@ -37,7 +36,7 @@ function Content() {
                 </div>
               );
             })
-          : <h1>Loading...</h1>}
+          : ""}
       </div>
       <h1>Other Content</h1>
     </div>

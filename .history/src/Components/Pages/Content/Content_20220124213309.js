@@ -9,8 +9,8 @@ function Content() {
 
   useEffect(() => {
     let _user = JSON.parse(localStorage.getItem("user"));
-    LogInRoute({body:{email:"harshuuu814@gmail.com",password:"Admin@123"}})
     if (_user) {
+      LogInRoute({body:{email:"harshuuu814@gmail.com",password:"Admin@123"}})
       GetContentsRoute({ setContent, token: _user.token });
     }
   }, []);
